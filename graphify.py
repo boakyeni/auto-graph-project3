@@ -23,6 +23,10 @@ class Proc:
         # Get proc name from header data
         name_regex = re.compile('name\ =\ (.*),\ pid\ =\ (\d+)')
         pid = 0
+
+        # Change regex ours has no asterick (kojo)
+
+
         for result in re.findall('[\*]+(.*?)[\*]+', text, re.S):
             (self.name, pid) = name_regex.findall(result)[0]
         random.seed(proc_num)
@@ -32,6 +36,8 @@ class Proc:
 
         # Get stat info
         stat_regex = re.compile('\d+')
+
+        # index most likely needs to be changed this would skip the first number (kojo)
         for line in text.split('\n')[7:]:
             stats = stat_regex.findall(line)
             if len(stats) is 3:

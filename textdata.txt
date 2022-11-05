@@ -1,0 +1,29 @@
+PSTAT_START
+*****************
+name = process, pid = 4
+Wait time = 0
+Times = {1,1,2}
+ticks = {1,2,8}
+*****************
+start=1, duration=1, priority=0
+start=1, duration=1, priority=0
+start=2, duration=1, priority=1
+start=2, duration=0, priority=1
+start=2, duration=0, priority=1
+start=2, duration=1, priority=1
+PSTAT_END
+
+PSTAT_START
+*****************
+name = processws, pid = 5
+Wait time = 0
+Times = {1,1,2}
+ticks = {1,2,8}
+*****************
+start=3, duration=1, priority=0
+start=3, duration=1, priority=0
+start=4, duration=1, priority=1
+start=4, duration=0, priority=1
+start=4, duration=0, priority=1
+start=4, duration=1, priority=1
+PSTAT_END
